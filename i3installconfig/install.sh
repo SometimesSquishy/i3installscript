@@ -1,5 +1,5 @@
 #!/bin/sh
-
+pacman -Syu artix-archlinux-support
 echo "hope this works"
 sleep 1
 rm /etc/pacman.conf
