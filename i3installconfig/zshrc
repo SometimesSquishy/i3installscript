@@ -1,0 +1,54 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
+
+
+
+alias icat="kitty +kitten icat"
+alias c="clear && neofetch"
+alias :q=exit
+alias tml="tmux list-sessions"
+alias tma="tmux attach -t"
+alias tmd="tmux detach"
+alias tmw="tmux attach -t work"
+alias tmm="tmux rename-session -t"
+alias tmks="tmux kill-session"
+alias tmka="tmux kill-server"
+alias web="lynx -accept_all_cookies -number_fields -scrollbar -scrollbar_arrow -vikeys https://duckduckgo.com"
+alias clock="tty-clock -tcC 7"
+alias night="redshift -m drm -l 00.0000:-00.0000 -t 5200:4000 -g 0.8 -v"
+alias vlock="vlock --all"
+alias vi=nvim
+alias v=nvim
+alias fuckoff="shutdown -h now"
+alias blu="sudo xbacklight -inc 5"
+alias bld="sudo xbacklight -dec 5"
+alias spd="speedtest-cli"
+alias n="neofetch"
+alias wtr="curl -s https://wttr.in"
+export EDITOR=nvim
+alias bl20="sudo xbacklight 20"
+alias bl50="sudo xbacklight 50"
+alias bl80="sudo xbacklight 80"
+alias bl100="sudo xbacklight 100"
+alias wc="wipeclean"
+alias sc="watcher -ds"
+alias sudo visudo="sudo EDITOR=nvim visudo"
+alias cmus="rm /home/squishy/.config/cmus/cache ;cmus"
+
+neofetch
+
+# Luke's config for the Zoomer Shell
+
+# Enable colors and change prompt:
+autoload -U colors && colors	# Load colors
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
+# Load syntax highlighting; should be last.
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/nulle
