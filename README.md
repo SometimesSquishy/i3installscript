@@ -1,3 +1,3 @@
 # i3installscript
 # To run
-# cd ~/i3installscript; sudo ./install.sh
+# cd ~/i3installconfig; sudo ./install.sh
