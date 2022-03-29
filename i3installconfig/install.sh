@@ -15,7 +15,7 @@ cd
 pacman -Syu
 mkdir ~/Tools
 mkdir ~/Tools/bin
-pacman -S i3-gaps i3blocks i3lock i3status polybar rofi firefox ntfs-3g pulseaudio lxappearance arandr kitty zsh newsboat neovim pulseaudio-alsa alsa-utils picom cmus redshift base-devel curl wget xdotool --no-confirm
+pacman -S i3-gaps i3blocks i3lock i3status polybar rofi firefox ntfs-3g feh newsboat pulseaudio lxappearance arandr kitty zsh newsboat neovim pulseaudio-alsa alsa-utils picom cmus redshift base-devel curl wget xdotool --no-confirm
 
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 
