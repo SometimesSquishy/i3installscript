@@ -5,7 +5,7 @@ sleep 1
 pacman -Syu artix-archlinux-support
 pacman-key --populate archlinux
 rm /etc/pacman.conf
-cp ~/i3installconfig/pacman.conf /etc/pacman.conf
+cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
 pacman -Sy
 cd
 git clone https://aur.archlinux.org/yay-git.git
@@ -26,9 +26,9 @@ cd ./Watcher/
 cd
 yay -S cava backlight_control
 
-cp ~/i3installconfig/scripts/* ~/Tools/bin
-cp ~/i3installconfig/configs ~/.config
-cp ~/i3installconfig/zshrc ~/.zshrc
+cp ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
+cp ~/i3installscript/i3installconfig/configs ~/.config
+cp ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 reboot
 
 
