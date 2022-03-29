@@ -24,7 +24,7 @@ git clone https://github.com/Waishnav/Watcher
 cd ./Watcher/
 ./install
 cd
-yay -S cava backlight_control --no-confirm
+yay -S cava backlight_control cbonsai --no-confirm
 
 cp ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp ~/i3installscript/i3installconfig/configs ~/.config
