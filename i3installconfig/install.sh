@@ -1,7 +1,9 @@
 #!/bin/sh
-pacman -Syu artix-archlinux-support
+
 echo "hope this works"
 sleep 1
+pacman -Syu artix-archlinux-support
+pacman-key --populate archlinux
 rm /etc/pacman.conf
 cp ~/i3installconfig/pacman.conf /etc/pacman.conf
 pacman -Sy
