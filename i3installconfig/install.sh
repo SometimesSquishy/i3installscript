@@ -29,6 +29,7 @@ yay -S cava backlight_control cbonsai plata-theme pulseaudio-control --no-confir
 cp ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp ~/i3installscript/i3installconfig/configs ~/.config
 cp ~/i3installscript/i3installconfig/zshrc ~/.zshrc
+chmod +x ~/.config/polybar/scripts/*.*
 reboot
 
 
