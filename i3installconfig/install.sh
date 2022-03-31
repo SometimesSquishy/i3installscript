@@ -5,7 +5,7 @@ sleep 1
 sudo pacman -Syu artix-archlinux-support
 sudo pacman-key --populate archlinux
 sudo pacman -Sy
-cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
+sudo cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
 sudo pacman -Sy
 cd
 git clone https://aur.archlinux.org/yay-git.git
@@ -36,6 +36,7 @@ cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 mkdir .cache/zsh
 chmod +x ~/.config/polybar/scripts/*
 chsh -s /bin/zsh
+sudo pacman -Syu
 
 echo "rebooting, switch to i3 on login screen, ctrl c to cancel reboot."
 sleep 1
