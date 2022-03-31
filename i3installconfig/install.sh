@@ -28,15 +28,16 @@ git clone https://github.com/Waishnav/Watcher
 cd ./Watcher/
 ./install
 cd
-
+sudo pacman -Syu
 cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
 cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 mkdir .cache/zsh
 chmod +x ~/.config/polybar/scripts/*
+chmod +x ~/Tools/bin/*
 chsh -s /bin/zsh
-sudo pacman -Syu
+
 
 echo "rebooting, switch to i3 on login screen, ctrl c to cancel reboot."
 sleep 1
