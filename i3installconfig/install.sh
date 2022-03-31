@@ -36,6 +36,6 @@ chmod +x ~/.config/polybar/scripts/*
 chsh -s /bin/zsh
 echo "rebooting, switch to i3 on login screen."
 sleep 2
-reboot
+sudo reboot
 
 
