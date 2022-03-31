@@ -15,7 +15,7 @@ cd
 sudo pacman -Syu
 mkdir ~/Tools
 mkdir ~/Tools/bin
-sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi firefox ntfs-3g feh newsboat pulseaudio lxappearance arandr kitty zsh newsboat neovim pulseaudio-alsa alsa-utils picom cmus redshift base-devel curl wget xdotool
+sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi htop firefox ntfs-3g feh newsboat pulseaudio lxappearance arandr kitty zsh newsboat neovim pulseaudio-alsa alsa-utils picom cmus redshift base-devel curl wget xdotool
 
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 
@@ -29,8 +29,9 @@ yay -S cava backlight_control cbonsai plata-theme pulseaudio-control
 cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
-mkdir .cache zsh
+mkdir .cache/zsh
 chmod +x ~/.config/polybar/scripts/*.*
+chsh -s /bin/zsh
 echo "rebooting, switch to i3 on login screen."
 sleep 2
 reboot
