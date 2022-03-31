@@ -27,7 +27,7 @@ cd ./Watcher/
 ./install
 cd
 yay -S cava backlight_control cbonsai plata-theme pulseaudio-control
-
+cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
 cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
