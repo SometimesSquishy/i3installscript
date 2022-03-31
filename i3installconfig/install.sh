@@ -17,6 +17,7 @@ mkdir ~/Tools
 mkdir ~/Tools/bin
 mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
+mkdir ~/.config/newsboat
 
 sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi htop firefox ntfs-3g feh newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim pulseaudio-alsa alsa-utils picom cmus redshift base-devel curl wget xdotool
 yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons
