@@ -31,6 +31,8 @@ cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 mkdir .cache zsh
 chmod +x ~/.config/polybar/scripts/*.*
+echo "rebooting, switch to i3 on login screen."
+sleep 2
 reboot
 
 
