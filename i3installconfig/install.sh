@@ -26,9 +26,9 @@ cd ./Watcher/
 cd
 yay -S cava backlight_control cbonsai plata-theme pulseaudio-control --no-confirm
 
-cp ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
-cp ~/i3installscript/i3installconfig/configs/* ~/.config
-cp ~/i3installscript/i3installconfig/zshrc ~/.zshrc
+cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
+cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
+cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 mkdir .cache zsh
 chmod +x ~/.config/polybar/scripts/*.*
 reboot
