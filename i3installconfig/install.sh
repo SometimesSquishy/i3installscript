@@ -26,7 +26,7 @@ git clone https://github.com/Waishnav/Watcher
 cd ./Watcher/
 ./install
 cd
-yay -S cava backlight_control cbonsai plata-theme pulseaudio-control
+yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons
 cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
 cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
