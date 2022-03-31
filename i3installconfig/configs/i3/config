@@ -201,8 +201,6 @@ exec --no-startup-id feh --bg-scale --randomize ~/Pictures/Wallpapers
 #Lock screen binding.
 #bindsym $mod+shift+x exec ~/@3rdPartyPackages/betterlockscreen/lock.sh -l dimblur
 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-
 exec_always picom --config /dev/null
 
 exec bash -v ~/Tools/bin/xkb.sh
