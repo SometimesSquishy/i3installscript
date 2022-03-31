@@ -9,7 +9,7 @@ cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
 sudo pacman -Sy
 cd
 git clone https://aur.archlinux.org/yay-git.git
-cd yay-git
+cd ~/yay-git
 makepkg -si c
 cd
 sudo pacman -Syu
