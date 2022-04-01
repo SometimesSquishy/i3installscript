@@ -21,8 +21,10 @@ mkdir ~/.config/newsboat
 
 sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi htop firefox ntfs-3g feh neofetch newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool
 yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons
-sudo echo
-
+sudo echo permit :wheel > /etc/doas.conf
+sudo echo permit persist :wheel > /etc/doas.conf
+sudo echo permit nopass $USER cmd reboot > /etc/doas.conf
+sudo echo permit nopass $USER cmd poweroff > /etc/doas.conf
 
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 cd
@@ -30,7 +32,10 @@ git clone https://github.com/Waishnav/Watcher
 cd ./Watcher/
 ./install
 cd
-sudo pacman -Syu
+doas curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+doas chmod a+rx /usr/local/bin/yt-dlp
+
+doas pacman -Syu
 cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
 cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
@@ -39,7 +44,7 @@ mkdir .cache/zsh
 chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/Tools/bin/*
 chsh -s /bin/zsh
-
+doas pacman -Rns sudo
 
 echo "rebooting, switch to i3 on login screen, ctrl c to cancel reboot."
 sleep 1
