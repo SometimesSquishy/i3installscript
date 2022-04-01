@@ -8,10 +8,6 @@ sudo pacman -Sy
 sudo cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
 sudo pacman -Sy
 cd
-git clone https://aur.archlinux.org/yay-git.git
-cd ~/yay-git
-makepkg -si c
-cd
 sudo pacman -Syu
 mkdir ~/Tools
 mkdir ~/Tools/bin
@@ -19,8 +15,15 @@ mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
 mkdir ~/.config/newsboat
 
-sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi htop firefox ntfs-3g feh neofetch newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
-yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli base-devel make --noconfirm
+sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi htop firefox ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
+
+git clone https://aur.archlinux.org/yay-git.git
+cd ~/yay-git
+makepkg -si c
+
+yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli --noconfirm
+
+
 
 sudo echo permit :wheel > /etc/doas.conf
 sudo echo permit persist :wheel > /etc/doas.conf
