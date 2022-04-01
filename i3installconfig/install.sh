@@ -20,11 +20,8 @@ mkdir ~/Pictures/Wallpapers
 mkdir ~/.config/newsboat
 
 sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi htop firefox ntfs-3g feh neofetch newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
-yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli --noconfirm
-sudo echo permit :wheel > /etc/doas.conf
-sudo echo permit persist :wheel > /etc/doas.conf
-sudo echo permit nopass $USER cmd reboot > /etc/doas.conf
-sudo echo permit nopass $USER cmd poweroff > /etc/doas.conf
+yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli base-devel make --noconfirm
+sudo cp -r ~/i3installscrip/i3installconfig/doas /etc/doas.conf
 
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 cd
