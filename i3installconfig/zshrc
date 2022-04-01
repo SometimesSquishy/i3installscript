@@ -33,9 +33,11 @@ alias reboot="doas reboot"
 alias spd="speedtest-cli"
 alias n="neofetch"
 alias wtr="curl -s https://wttr.in"
+alias history="history 1| awk '{print $2}' | sort | uniq -c | sort -rn | head -n10"
+alias ip="curl http://ipecho.net/plain; echo"
+
 export EDITOR=nvim
 
-alias wc="wipeclean"
 alias sc="watcher -ds"
 alias sudo visudo="sudo EDITOR=nvim visudo"
 alias cmus="rm /home/squishy/.config/cmus/cache ;cmus"
