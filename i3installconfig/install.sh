@@ -23,13 +23,6 @@ makepkg -si c
 
 yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli --noconfirm
 
-
-
-sudo echo permit :wheel > /etc/doas.conf
-sudo echo permit persist :wheel > /etc/doas.conf
-sudo echo permit nopass $USER cmd reboot > /etc/doas.conf
-sudo echo permit nopass $USER cmd poweroff > /etc/doas.conf
-
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 cd
 git clone https://github.com/Waishnav/Watcher
@@ -44,6 +37,10 @@ cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
 cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
+cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
+cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
+
+
 mkdir .cache/zsh
 chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/Tools/bin/*
