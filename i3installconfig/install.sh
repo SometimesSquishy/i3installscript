@@ -39,6 +39,7 @@ cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
 cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
+sudo nano /etc/doas.conf
 
 
 mkdir .cache/zsh
