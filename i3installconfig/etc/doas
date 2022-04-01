@@ -1,0 +1,6 @@
+### REPLACE $USER WITH YOUR USER NAME
+
+permit :wheel
+permit persist :wheel
+permit nopass $USER cmd reboot
+permit nopass $USER cmd poweroff
