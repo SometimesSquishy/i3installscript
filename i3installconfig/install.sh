@@ -38,6 +38,7 @@ cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 sudo cp ~/i3installscript/i3installconfig/etc/lightdm-gtk-greeter.conf /etc/lightdm
+sudo cp ~/i3installscript/i3installconfig/etc/LightDmPics /usr/share/backgrounds
 cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
 cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
 sudo nano /etc/doas.conf
