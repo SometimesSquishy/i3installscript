@@ -1,4 +1,9 @@
-### REPLACE $USER WITH YOUR USER NAME
+
+# ----------------------------------------------------------- #
+
+###            REPLACE $USER WITH YOUR USER NAME            ###
+
+# ----------------------------------------------------------- #
 
 permit :wheel
 permit persist :wheel
