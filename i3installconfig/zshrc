@@ -26,17 +26,15 @@ alias night="redshift -m drm -l 00.0000:-00.0000 -t 5200:4000 -g 0.8 -v"
 alias vlock="vlock --all"
 alias vi=nvim
 alias v=nvim
-alias fuckoff="shutdown -h now"
-alias blu="sudo xbacklight -inc 5"
-alias bld="sudo xbacklight -dec 5"
+alias fuckoff="doas poweroff"
+alias poweroff="doas poweroff"
+alias shutdown="doas poweroff"
+alias reboot="doas reboot"
 alias spd="speedtest-cli"
 alias n="neofetch"
 alias wtr="curl -s https://wttr.in"
 export EDITOR=nvim
-alias bl20="sudo xbacklight 20"
-alias bl50="sudo xbacklight 50"
-alias bl80="sudo xbacklight 80"
-alias bl100="sudo xbacklight 100"
+
 alias wc="wipeclean"
 alias sc="watcher -ds"
 alias sudo visudo="sudo EDITOR=nvim visudo"
