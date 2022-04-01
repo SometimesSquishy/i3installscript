@@ -1,5 +1,6 @@
 # i3installscript
-To Install
+#
+# To Install
 ```
 cd ~/ ; git clone https://github.com/SometimesSquishy/i3installscript.git
 ```
