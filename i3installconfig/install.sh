@@ -29,6 +29,11 @@ git clone https://github.com/Waishnav/Watcher
 cd ./Watcher/
 ./install
 cd
+git clone --depth 1 https://github.com/vandalsoul/darkmatter-grub2-theme.git
+cd darkmatter-grub2-theme
+sudo python3 install.py
+cd
+
 doas curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 doas chmod a+rx /usr/local/bin/yt-dlp
 
