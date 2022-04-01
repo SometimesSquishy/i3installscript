@@ -19,8 +19,8 @@ mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
 mkdir ~/.config/newsboat
 
-sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi htop firefox ntfs-3g feh neofetch newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool
-yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli
+sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi htop firefox ntfs-3g feh neofetch newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
+yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli --noconfirm
 sudo echo permit :wheel > /etc/doas.conf
 sudo echo permit persist :wheel > /etc/doas.conf
 sudo echo permit nopass $USER cmd reboot > /etc/doas.conf
@@ -45,6 +45,8 @@ chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/Tools/bin/*
 chsh -s /bin/zsh
 doas pacman -Rns sudo
+doas pacman -Scc --noconfirm
+yay -Scc --noconfirm
 
 echo "rebooting, switch to i3 on login screen, ctrl c to cancel reboot."
 sleep 1
