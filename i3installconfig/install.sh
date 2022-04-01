@@ -37,6 +37,7 @@ cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
 cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
+sudo cp ~/i3installscript/i3installconfig/etc/lightdm-gtk-greeter.conf /etc/lightdm
 cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
 cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
 sudo nano /etc/doas.conf
@@ -46,7 +47,7 @@ mkdir .cache/zsh
 chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/Tools/bin/*
 chsh -s /bin/zsh
-doas pacman -Rns sudo
+doas pacman -Rns sudo xfce4 xcfe4-goodies
 doas pacman -Scc --noconfirm
 yay -Scc --noconfirm
 
