@@ -60,6 +60,8 @@ doas pacman -Rns sudo xfce4 xcfe4-goodies
 doas pacman -Scc --noconfirm
 yay -Scc --noconfirm
 
+clear
+
 echo "rebooting, switch to i3 on login screen, ctrl c to cancel reboot."
 sleep 1
 echo "oh ya also say bye bye to sudo cuz now its time for doas"
