@@ -33,8 +33,10 @@ alias reboot="doas reboot"
 alias spd="speedtest-cli"
 alias n="neofetch"
 alias wtr="curl -s https://wttr.in"
+
+
 alias history="history 1| awk '{print $2}' | sort | uniq -c | sort -rn | head -n10"
-alias ip="curl http://ipecho.net/plain; echo"
+alias ip="curl http://ident.me; echo"
 
 export EDITOR=nvim
 
