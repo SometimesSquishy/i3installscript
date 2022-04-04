@@ -52,7 +52,7 @@ sudo cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
 sudo nano /etc/doas.conf
 
 
-mkdir .cache/zsh
+mkdir ~/.cache/zsh
 chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/Tools/bin/*
 chsh -s /bin/zsh
