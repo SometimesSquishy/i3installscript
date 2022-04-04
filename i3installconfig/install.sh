@@ -21,7 +21,7 @@ git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
 makepkg -si c
 
-yay -S cava backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli --noconfirm
+yay -S cava lf backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli --noconfirm
 
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 cd
@@ -29,10 +29,13 @@ git clone https://github.com/Waishnav/Watcher
 cd ./Watcher/
 ./install
 cd
-git clone --depth 1 https://github.com/vandalsoul/darkmatter-grub2-theme.git
-cd darkmatter-grub2-theme
-sudo python3 install.py
-cd
+
+git clone https://github.com/AdisonCavani/distro-grub-themes.git
+sudo mkdir /boot/grub/themes
+cd distro-grub-themes/customize
+sudo cp -r artix/ /boot/grub/themes
+sudo cp ~/i3installscript/i3installconfig/etc/grub /etc/default/grub
+
 
 doas curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 doas chmod a+rx /usr/local/bin/yt-dlp
@@ -44,8 +47,8 @@ cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 sudo cp ~/i3installscript/i3installconfig/etc/lightdm-gtk-greeter.conf /etc/lightdm
 sudo cp ~/i3installscript/i3installconfig/etc/LightDmPics /usr/share/backgrounds
-cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
-cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
+sudo cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
+sudo cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
 sudo nano /etc/doas.conf
 
 
