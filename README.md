@@ -9,7 +9,7 @@ first install git make and fakeroot
 ```
 sudo pacman -S git make fakeroot
 ```
-
+and then
 ```
 cd ~/ ; git clone https://github.com/SometimesSquishy/i3installscript.git
 ```
