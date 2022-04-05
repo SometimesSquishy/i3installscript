@@ -5,9 +5,9 @@ https://artixlinux.org/download.php
 # i3installscript
 #
 # To Install
-first install git make and fakeroot
+first install git
 ```
-sudo pacman -S git make fakeroot
+sudo pacman -S git
 ```
 and then
 ```
