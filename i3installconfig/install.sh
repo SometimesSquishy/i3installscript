@@ -14,7 +14,7 @@ mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
 mkdir ~/.config/newsboat
 
-sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi caja htop firefox tor tor-browser ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
+sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi caja htop make fakeroot firefox tor tor-browser ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
 
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
@@ -50,7 +50,7 @@ sudo cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
 sudo cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
 sudo nano /etc/doas.conf
 
-cd && rm -rf distro-grub-themes Watcher i3installscript yay-git
+cd ~/ && rm -rf distro-grub-themes Watcher i3installscript yay-git
 
 mkdir ~/.cache/zsh
 chmod +x ~/.config/polybar/scripts/*
