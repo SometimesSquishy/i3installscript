@@ -14,7 +14,7 @@ mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
 mkdir ~/.config/newsboat
 
-sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi caja htop make fakeroot firefox flameshot tor tor-browser ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
+sudo pacman -S i3-gaps i3blocks i3lock i3status polybar rofi caja htop make fakeroot firefox flameshot tor tor-browser pacman-contrib ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
 
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
