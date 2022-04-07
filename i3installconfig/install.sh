@@ -50,7 +50,6 @@ sudo cp ~/i3installscript/i3installconfig/etc/lightdm-gtk-greeter.conf /etc/ligh
 sudo cp ~/i3installscript/i3installconfig/etc/LightDmPics /usr/share/backgrounds
 sudo cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
 sudo cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
-sudo cp ~/i3installscript/i3installconfig/etc/colemak /etc/default/keyboard
 
 sudo nano /etc/doas.conf
 
