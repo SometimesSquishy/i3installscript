@@ -11,9 +11,9 @@ sudo pacman -S git
 ```
 and then
 ```
-cd ~/ ; git clone https://github.com/SometimesSquishy/i3installscript.git
+cd ~/ && git clone https://github.com/SometimesSquishy/i3installscript.git
 ```
 # To run
 ```
-cd ~/i3installconfig/i3installscript; chmod +x install.sh; sudo ./install.sh
+cd ~/i3installconfig/i3installscript && chmod +x install.sh && sudo ./install.sh
 ```
