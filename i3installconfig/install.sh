@@ -3,9 +3,10 @@
 echo "hope this works"
 sleep 1
 sudo pacman -Sy
-sudo cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
 sudo pacman -Syu artix-archlinux-support --noconfirm
 sudo pacman-key --populate archlinux --noconfirm
+sudo pacman -Sy
+sudo cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
 sudo pacman -Sy
 sudo pacman -Syu --noconfirm
 mkdir ~/Tools
