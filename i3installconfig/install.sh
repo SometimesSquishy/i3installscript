@@ -38,8 +38,8 @@ sudo cp -r artix/ /boot/grub/themes
 sudo cp ~/i3installscript/i3installconfig/etc/grub /etc/default/grub
 
 
-doas curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-doas chmod a+rx /usr/local/bin/yt-dlp
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
 
 doas pacman -Syu
 cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
