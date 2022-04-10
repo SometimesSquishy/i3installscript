@@ -60,7 +60,8 @@ cd ~/ && rm -rf distro-grub-themes Watcher i3installscript yay-git
 chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/Tools/bin/*
 chsh -s /bin/zsh
-doas pacman -Rns sudo xfce4 xcfe4-goodies --noconfirm
+sudo pacman -Rns xfce4 xfce4-goodies
+doas pacman -R sudo
 doas pacman -Scc --noconfirm
 yay -Scc --noconfirm
 
