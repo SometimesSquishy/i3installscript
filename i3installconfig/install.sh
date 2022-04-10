@@ -41,7 +41,7 @@ sudo cp ~/i3installscript/i3installconfig/etc/grub /etc/default/grub
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
 
-doas pacman -Syu
+sudo pacman -Syu
 cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
 cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
