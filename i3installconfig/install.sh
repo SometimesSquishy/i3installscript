@@ -56,7 +56,7 @@ sudo nano /etc/doas.conf
 
 cd ~/ && rm -rf distro-grub-themes Watcher i3installscript yay-git
 
-#mkdir ~/.cache/zsh
+mkdir ~/.cache/zsh
 chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/Tools/bin/*
 chsh -s /bin/zsh
