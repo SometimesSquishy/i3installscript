@@ -222,6 +222,7 @@ bindsym F6 exec --no-startup-id pactl set-sink-mute 0 toggle # mute
 
 
 # Sreen brightness controls
+
 # increase screen brightness
 #bindsym XF86MonBrightnessUp exec --no-startup-id backlight_control +5 
 bindsym F3 exec --no-startup-id backlight_control +5
@@ -235,9 +236,9 @@ bindsym F2 exec --no-startup-id backlight_control -5
 #bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-#bindsym XF86AudioPlay exec playerctl play
-#bindsym XF86AudioPause exec playerctl pause
-#bindsym XF86AudioNext exec playerctl next
-#bindsym XF86AudioPrev exec playerctl previous
+
+bindsym F10 exec cmus-remote --pause
+bindsym F11 exec cmus-remote --next
+bindsym F9 exec cmus-remote --prev
 #---------------------------------------------------------------------------------------------------------
 
