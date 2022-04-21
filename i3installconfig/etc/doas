@@ -1,11 +1,14 @@
 
 # ----------------------------------------------------------- #
 
-###            REPLACE $USER WITH YOUR USER NAME            ###
+###            REPLACE squishy WITH YOUR USER NAME            ###
 
 # ----------------------------------------------------------- #
 
 permit :wheel
 permit persist :wheel
-permit nopass $USER cmd reboot
-permit nopass $USER cmd poweroff
+permit nopass squishy cmd reboot
+permit nopass squishy cmd poweroff
+permit nopass squishy cmd tlp
+permit nopass squishy cmd wg-quick
+permit nopass squishy cmd yay
