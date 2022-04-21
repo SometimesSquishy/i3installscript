@@ -22,6 +22,7 @@ sudo pacman -S i3-gaps i3blocks i3lock i3status polybar pulseaudio-bluetooth rof
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
 makepkg -si c
+cd
 
 yay -S cava jellyfin-media-player pulseaudio-control lf tty-clock-git backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli --noconfirm
 
