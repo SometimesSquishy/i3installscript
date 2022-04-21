@@ -17,7 +17,7 @@ mkdir ~/Pictures/Wallpapers
 mkdir ~/.config/newsboat
 mkdir ~/.config/picom
 
-sudo pacman -S i3-gaps i3blocks i3lock i3status polybar pulseaudio-bluetooth rofi caja htop make fakeroot firefox flameshot tor tor-browser resolvconf pacman-contrib ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
+sudo pacman -S i3-gaps i3blocks i3lock i3status polybar pulseaudio-bluetooth rofi caja htop make fakeroot cargo firefox flameshot tor tor-browser resolvconf pacman-contrib ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
 
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
@@ -30,6 +30,11 @@ cd
 git clone https://github.com/Waishnav/Watcher
 cd ./Watcher/
 ./install
+cd
+
+git clone https://github.com/Bond-009/cmus-discord-rpc
+cd cmus-discord-rpc
+cargo install --path .
 cd
 
 git clone https://github.com/AdisonCavani/distro-grub-themes.git
