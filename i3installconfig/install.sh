@@ -32,11 +32,6 @@ cd ./Watcher/
 ./install
 cd
 
-git clone https://github.com/Bond-009/cmus-discord-rpc
-cd cmus-discord-rpc
-cargo install --path .
-cd
-
 git clone https://github.com/AdisonCavani/distro-grub-themes.git
 sudo mkdir /boot/grub/themes
 cd distro-grub-themes/customize
