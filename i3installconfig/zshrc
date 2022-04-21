@@ -34,8 +34,8 @@ alias wtr="clear && neofetch && curl -s https://wttr.in"
 alias weather="clear && neofetch && curl -s https://wttr.in"
 
 
-alias history="history 1| awk '{print $2}' | sort | uniq -c | sort -rn | head -n10"
-alias ip="curl http://ident.me; echo"
+#alias history="history 1| awk '{print $2}' | sort | uniq -c | sort -rn | head -n10"
+#alias ip="curl http://ident.me; echo"
 
 export EDITOR=nvim
 
@@ -43,6 +43,7 @@ alias sc="watcher -ds"
 alias sudo visudo="sudo EDITOR=nvim visudo"
 alias cmus="rm /home/squishy/.config/cmus/cache ;cmus"
 
+alias yt-dlp="exec ~/Tools/bin/yt-dlp.sh"
 neofetch
 
 # Luke's config for the Zoomer Shell
