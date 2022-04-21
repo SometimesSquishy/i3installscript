@@ -17,3 +17,8 @@ cd ~/ && git clone https://github.com/SometimesSquishy/i3installscript.git
 ```
 cd ~/i3installscript/i3installconfig && chmod +x install.sh && ./install.sh
 ```
+
+Run this to remove xfce and sudo
+```
+doas pacman -Rns xfce4 xfce4-goodies sudo
+```
