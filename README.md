@@ -15,5 +15,5 @@ cd ~/ && git clone https://github.com/SometimesSquishy/i3installscript.git
 ```
 # To run
 ```
-cd ~/i3installscript/i3installconfig && chmod +x install.sh && sudo ./install.sh
+cd ~/i3installscript/i3installconfig && chmod +x install.sh && ./install.sh
 ```
