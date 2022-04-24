@@ -4,6 +4,9 @@
 # ONLY DO THIS ON ARTIX
 # or you could edit the install script to remove replacing mirrors
 https://artixlinux.org/download.php
+<p>&nbsp;</p>
+
+
 # Screenshots
 
 
