@@ -16,6 +16,8 @@ mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
 mkdir ~/.config/newsboat
 mkdir ~/.config/picom
+mkdir ~/.cache/zsh
+
 
 sudo pacman -S i3-gaps i3blocks i3lock i3status polybar pulseaudio-bluetooth rofi caja htop make fakeroot firefox flameshot tor tor-browser resolvconf pacman-contrib ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
 
@@ -59,19 +61,17 @@ sudo nano /etc/doas.conf
 
 cd ~/ && rm -rf distro-grub-themes Watcher i3installscript yay-git
 
-mkdir ~/.cache/zsh
+
 chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/Tools/bin/*
 chsh -s /bin/zsh
 
-doas pacman -Scc --noconfirm
+sudo pacman -Scc --noconfirm
 yay -Scc --noconfirm
 
 clear
 
 echo "rebooting, switch to i3 on login screen, ctrl c to cancel reboot."
-sleep 1
-echo "oh ya also say bye bye to sudo cuz now its time for doas"
 sleep 1
 echo "reboot in 5"
 sleep 1
