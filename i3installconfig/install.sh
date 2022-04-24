@@ -39,6 +39,7 @@ cd distro-grub-themes/customize
 sudo cp -r artix/ /boot/grub/themes
 sudo cp ~/i3installscript/i3installconfig/etc/grub /etc/default/grub
 
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
