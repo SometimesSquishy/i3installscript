@@ -2,8 +2,10 @@
 # or you could edit the install script to remove replacing mirrors
 https://artixlinux.org/download.php
 # Screenshots
-https://github.com/SometimesSquishy/i3installscript/blob/main/Screenshots/2022-04-23_21-24.png
 
+<p align="center">
+  <img src="https://github.com/SometimesSquishy/i3installscript/blob/main/Screenshots/2022-04-23_21-24.png" width="350" title="hover text">
+</p>
 
 
 
