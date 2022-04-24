@@ -43,7 +43,7 @@ alias sc="watcher -ds"
 alias sudo visudo="sudo EDITOR=nvim visudo"
 alias cmus="rm /home/squishy/.config/cmus/cache ;cmus"
 
-alias yt-dlp="exec ~/Tools/bin/yt-dlp.sh"
+alias music-dlp="exec ~/Tools/bin/yt-dlp.sh"
 neofetch
 
 # Luke's config for the Zoomer Shell
