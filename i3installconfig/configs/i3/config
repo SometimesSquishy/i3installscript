@@ -189,12 +189,12 @@ popup_during_fullscreen smart
 focus_follows_mouse no
 
 # Pin window class on specific workspace
-assign [class="^Firefox$"] 1
+assign [class="^firefox$"] 3
 
 # Bind print screen (NEED BETTER SCREENSHOT UTIL)
 bindsym Print exec flameshot
 
-#To set a wallpaper create directory ~/Pictures and name file as wallpaper
+#To set a wallpaper create directory ~/Pictures/Wallpapers
 exec --no-startup-id feh --bg-scale --randomize ~/Pictures/Wallpapers
 
 
@@ -211,34 +211,43 @@ bindsym $mod+shift+m exec bash -v ~/Tools/bin/muzix.sh
 
 #LAPTOP CONTROLSSSSSSSSSS
 #-------------------------------------------------------------------------------------------------------
-# Pulse Audio controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2% #increase sound volume
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2% #decrease sound volume
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#uncomment/modify as seen fit
 
-bindsym F7 exec --no-startup-id pactl set-sink-volume 0 -2% # sound down
-bindsym F8 exec --no-startup-id pactl set-sink-volume 0 +2% # sound up
-bindsym F6 exec --no-startup-id pactl set-sink-mute 0 toggle # mute
+
+# Pulse Audio controls
+
+#bindsym F7 exec --no-startup-id pactl set-sink-volume 0 -2% # sound down
+#bindsym F8 exec --no-startup-id pactl set-sink-volume 0 +2% # sound up
+#bindsym F6 exec --no-startup-id pactl set-sink-mute 0 toggle # mute
 
 
 # Sreen brightness controls
 
-# increase screen brightness
-#bindsym XF86MonBrightnessUp exec --no-startup-id backlight_control +5 
-bindsym F3 exec --no-startup-id backlight_control +5
+#bindsym F3 exec --no-startup-id backlight_control +5
 
-# decrease screen brightness
-#bindsym XF86MonBrightnessDown exec backlight_control -5
-bindsym F2 exec --no-startup-id backlight_control -5
-
-
-# Touchpad controls
-#bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+#bindsym F2 exec --no-startup-id backlight_control -5
 
 # Media player controls
 
-bindsym F10 exec cmus-remote --pause
-bindsym F11 exec cmus-remote --next
-bindsym F9 exec cmus-remote --prev
+#bindsym F10 exec cmus-remote --pause
+#bindsym F11 exec cmus-remote --next
+#bindsym F9 exec cmus-remote --prev
+
+
+
 #---------------------------------------------------------------------------------------------------------
+
+
+
+## Deprecated in favor of just using F keys
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+#bindsym XF86MonBrightnessDown exec backlight_control -5
+#bindsym XF86MonBrightnessUp exec --no-startup-id backlight_control +5 
+
+# Touchpad controls
+#bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
