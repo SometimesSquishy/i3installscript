@@ -34,11 +34,3 @@ cd ~/ && git clone https://github.com/SometimesSquishy/i3installscript.git
 cd ~/i3installscript/i3installconfig && chmod +x install.sh && ./install.sh
 ```
 
-to add another disc go to your fstab and add
-```
-UUID= ENTER DRIVE UUID /DRIVE MOUNT POINT         ext4    defaults,noatime 0 0
-```
-restart then
-```
-sudo chmod -Rv a+w /DRIVE MOUNT POINT
-```
