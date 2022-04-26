@@ -19,7 +19,7 @@ mkdir ~/.config/picom
 mkdir ~/.cache/zsh
 
 
-sudo pacman -S i3-gaps i3blocks i3lock i3status polybar pulseaudio-bluetooth rofi caja htop make fakeroot firefox flameshot tor tor-browser resolvconf pacman-contrib ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
+sudo pacman -S i3-gaps i3blocks i3lock i3status polybar pulseaudio-bluetooth rofi caja htop make fakeroot firefox flameshot tor tor-browser meson resolvconf pacman-contrib dunst ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
 
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
