@@ -49,6 +49,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
+
 git clone https://github.com/snwh/faba-icon-theme.git
 cd faba-icon-theme
 meson "build" --prefix=/usr
