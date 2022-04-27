@@ -69,7 +69,7 @@ sudo cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
 
 sudo nano /etc/doas.conf
 
-cd ~/ && rm -rf distro-grub-themes Watcher yay-git
+cd ~/ && rm -rf distro-grub-themes Watcher yay-git faba-icon-theme
 
 
 chmod +x ~/.config/polybar/scripts/*
