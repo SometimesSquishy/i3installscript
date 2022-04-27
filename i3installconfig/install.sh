@@ -23,14 +23,14 @@ git clone https://github.com/SometimesSquishy/i3-rice.git
 cd ~/i3installscript/i3installconfig/i3-rice
 mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscript/i3installconfig && rm -rf i3-rice
 
-sudo pacman -S i3-gaps i3blocks i3lock i3status polybar pulseaudio-bluetooth rofi caja htop make fakeroot firefox flameshot tor tor-browser meson resolvconf pacman-contrib dunst ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool --noconfirm
+sudo pacman -S i3-gaps i3blocks i3lock i3status polybar pulseaudio-bluetooth rofi caja htop make fakeroot firefox flameshot tor tor-browser meson resolvconf pacman-contrib dunst ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool
 
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
 makepkg -si c
 cd
 
-yay -S cava pulseaudio-control nerd-fonts-complete lf jq tty-clock-git backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick --noconfirm
+yay -S cava pulseaudio-control nerd-fonts-complete lf jq tty-clock-git backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
 
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 cd
