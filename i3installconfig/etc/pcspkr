@@ -1,2 +1,3 @@
 # this disables that annoying asf beep on reboot and stuff
 blacklist pcspkr
+blacklist snd_pcsp
