@@ -30,7 +30,7 @@ cd ~/yay-git
 makepkg -si c
 cd
 
-yay -S cava pulseaudio-control nerd-fonts-complete betterlockscreen lf jq tty-clock-git backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
+yay -S cava pulseaudio-control nerd-fonts-complete tlp betterlockscreen lf jq tty-clock-git backlight_control cbonsai plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
 
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 cd
