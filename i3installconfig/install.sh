@@ -18,7 +18,7 @@ mkdir ~/.config/newsboat
 mkdir ~/.config/picom
 mkdir ~/.cache/zsh
 mkdir ~/.config/dunst
-
+mkdir ~/.config/lf
 
 cd ~/i3installscript/i3installconfig
 git clone https://github.com/SometimesSquishy/i3-rice.git
