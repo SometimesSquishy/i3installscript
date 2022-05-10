@@ -49,6 +49,8 @@ sudo cp ~/i3installscript/i3installconfig/etc/grub /etc/default/grub
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
+git clone https://github.com/trakBan/ipfetch.git && cd ipfetch && sudo sh setup.sh
+
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
 
