@@ -83,6 +83,7 @@ chsh -s /bin/zsh
 sudo pacman -Scc --noconfirm
 yay -Scc --noconfirm
 
+sudo pacman -Rns xfce4 xfce4-goodies
 clear
 
 echo "rebooting, switch to i3 on login screen, ctrl c to cancel reboot."
