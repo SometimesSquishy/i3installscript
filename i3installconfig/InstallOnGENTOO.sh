@@ -30,7 +30,7 @@ mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscri
 sudo emerge x11-libs/libX11 x11-base/xorg-server x11-apps/xinit x11-libs/libXrandr x11-libs/libXinemerama x11-libs/libXft x11-apps/xrdb x11-apps/mesa-progs x11-apps/xrandr x11-misc/arandr x11-drivers/x386-video-amdgpu x11-misc/unclutter x11-misc/xclip
 
 # Assorted useful stuff
-sudo emerge dev-vcs/git app-editors/neovim media-sound/alsautils media-fonts/fontawesome media-gfx/feh
+sudo emerge dev-vcs/git app-editors/neovim media-sound/alsautils media-fonts/fontawesome media-gfx/feh x11-misc/pcmanfm
 
 # Desktop enviroment
 sudo emerge x11-wm/i3-gaps x11-misc/polybar x11-misc/rofi x11-misc/picom x11-misc/dunst
