@@ -1,6 +1,6 @@
 # need to have it echo in use flags
 # ones i need USE="dbus alsa curl i3wm ipc network ncurses portaudio png perl pulseaudio sdl Xinerama -systemd -gnome -kde"
-euse -E dbus alsa curl i3wm ipc network firefox jpeg opengl pam python mpeg mpeg4 ncurses portaudio png pcre perl pulseaudio sdl Xinerama unicode -systemd -gnome -kde
+euse -E dbus alsa curl i3wm ipc network firefox jpeg opengl pam python mpeg mpeg4 ncurses portaudio png pcre perl pulseaudio ssl sdl Xinerama unicode usb -systemd -gnome -kde
 
 
 
