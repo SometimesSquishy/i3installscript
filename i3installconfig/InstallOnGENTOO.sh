@@ -1,6 +1,6 @@
 # need to have it echo in use flags
-# ones i need USE="dbus alsa curl i3wm ipc network ncurses portaudio pulseaudio sdl Xinerama -systemd -gnome -kde"
-
+# ones i need USE="dbus alsa curl i3wm ipc network ncurses portaudio png perl pulseaudio sdl Xinerama -systemd -gnome -kde"
+euse -E dbus alsa curl i3wm ipc network firefox jpeg opengl pam python mpeg mpeg4 ncurses portaudio png pcre perl pulseaudio sdl Xinerama unicode -systemd -gnome -kde
 
 
 
@@ -30,7 +30,7 @@ mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscri
 sudo emerge x11-libs/libX11 x11-base/xorg-server x11-apps/xinit x11-libs/libXrandr x11-libs/libXinemerama x11-libs/libXft x11-apps/xrdb x11-apps/mesa-progs x11-apps/xrandr x11-misc/arandr x11-drivers/x386-video-amdgpu x11-misc/unclutter x11-misc/xclip
 
 # Assorted useful stuff
-sudo emerge dev-vcs/git app-editors/neovim media-sound/alsautils media-fonts/fontawesome media-gfx/feh x11-misc/pcmanfm
+sudo emerge dev-vcs/git app-editors/neovim media-sound/alsautils media-fonts/fontawesome media-gfx/feh x11-misc/pcmanfm app-shells/zsh app-shells/gentoo-zsh-completions
 
 # Desktop enviroment
 sudo emerge x11-wm/i3-gaps x11-misc/polybar x11-misc/rofi x11-misc/picom x11-misc/dunst
