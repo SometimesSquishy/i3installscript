@@ -1,6 +1,10 @@
 #!/bin/sh
 
-echo "hope this works"
+
+echo "what is your open weather map key? https://openweathermap.org/api"
+read -r OWM-KEY
+echo $OWM-KEY >> $HOME/.config/polybar/owm-key
+
 sleep 1
 sudo pacman -Sy
 sudo pacman -Syu
