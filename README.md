@@ -41,7 +41,10 @@ to add another disc go to your fstab and add
 ```
 UUID= ENTER DRIVE UUID /DRIVE MOUNT POINT         ext4    defaults,noatime 0 0
 ```
-udisksctl mount -b
+then
+```
+udisksctl mount -b /dev/whatever
+```
 
 restart then
 ```
