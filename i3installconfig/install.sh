@@ -29,8 +29,7 @@ git clone https://github.com/SometimesSquishy/i3-rice.git
 cd ~/i3installscript/i3installconfig/i3-rice
 mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscript/i3installconfig && rm -rf i3-rice
 
-sudo pacman -S i3-gaps i3blocks i3lock i3status polybar bat exa duf dust pulseaudio-bluetooth rofi caja htop make fakeroot firefox flameshot tor tor-browser meson resolvconf pacman-contrib dunst ntfs-3g feh neofetch base-devel make newsboat pulseaudio lxappearance blueman arandr kitty zsh newsboat neovim qbittorrent pulseaudio-alsa alsa-utils doas picom cmus redshift base-devel curl wget xdotool
-
+sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance make meson neofetch neovim newsboat ntfs-3g pacman-contrib picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth qbittorrent redshift resolvconf rofi tor tor-browser wget xdotool zsh
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
 makepkg -si c
