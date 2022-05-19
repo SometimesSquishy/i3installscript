@@ -63,7 +63,7 @@ wget https://addons.mozilla.org/firefox/downloads/file/3951009/sponsorblock-4.4.
 
 #installing them
 cd ~/ff-extensions
-sudo firefox -install-global-extension *.xpi
+firefox -install-global-extension *.xpi
 cd
 rm -rf ~/ff-extensions 
 
