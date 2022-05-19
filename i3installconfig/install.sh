@@ -29,7 +29,7 @@ git clone https://github.com/SometimesSquishy/i3-rice.git
 cd ~/i3installscript/i3installconfig/i3-rice
 mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscript/i3installconfig && rm -rf i3-rice
 
-sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance make meson neofetch neovim newsboat ntfs-3g pacman-contrib picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth qbittorrent redshift resolvconf rofi tor tor-browser wget xdotool zsh
+sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance make meson neofetch neovim newsboat ntfs-3g pacman-contrib picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth qbittorrent redshift resolvconf rofi tor tor-browser unzip wget xdotool zsh
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
 makepkg -si c
@@ -53,6 +53,20 @@ sudo cp ~/i3installscript/i3installconfig/etc/grub /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 git clone https://github.com/trakBan/ipfetch.git && cd ipfetch && sudo sh setup.sh
+
+#firefox extensions
+
+#downloading them
+mkdir ~/ff-extensions
+cd ~/ff-extensions
+wget https://addons.mozilla.org/firefox/downloads/file/3951009/sponsorblock-4.4.1.xpi https://addons.mozilla.org/firefox/downloads/file/3933192/ublock_origin-1.42.4-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3943310/dark_reader-4.9.50-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3902154/decentraleyes-2.0.17-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3948477/i_dont_care_about_cookies-3.4.0.xpi 
+
+#installing them
+cd ~/ff-extensions
+sudo firefox -install-global-extension *.xpi
+cd
+rm -rf ~/ff-extensions 
+
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
