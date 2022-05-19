@@ -15,7 +15,7 @@ sudo cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
 sudo pacman -Sy
 sudo pacman -Syu --noconfirm
 mkdir ~/Tools
-mkdir ~/Tools/bin
+mkdir ~/Tools/scripts
 mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
 mkdir ~/.config/newsboat
@@ -79,7 +79,7 @@ sudo ninja -C "build" install
 
 sudo pacman -Syu
 cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
-cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/bin
+cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/scripts
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 sudo cp -r ~/i3installscript/i3installconfig/etc/LightDmPics/* /usr/share/backgrounds
@@ -94,7 +94,7 @@ cd ~/ && rm -rf distro-grub-themes Watcher yay-git faba-icon-theme
 
 
 chmod +x ~/.config/polybar/scripts/*
-chmod +x ~/Tools/bin/*
+chmod +x ~/Tools/scripts/*
 chsh -s /bin/zsh
 
 sudo pacman -Scc --noconfirm
