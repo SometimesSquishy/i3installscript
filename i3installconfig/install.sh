@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-echo "what is your open weather map key? https://openweathermap.org/api"
+echo "what is your open weather map key? https://home.openweathermap.org/api_keys"
 read -r OWM-KEY
 echo $OWM-KEY >> $HOME/.config/polybar/owm-key
 
