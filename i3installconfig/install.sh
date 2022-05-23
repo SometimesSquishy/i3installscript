@@ -44,6 +44,8 @@ cd ./Watcher/
 ./install
 cd
 
+# changing grub theme to artix, this can be changed to near any distro
+
 git clone https://github.com/AdisonCavani/distro-grub-themes.git
 sudo mkdir /boot/grub/themes
 cd distro-grub-themes/customize
@@ -54,7 +56,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 git clone https://github.com/trakBan/ipfetch.git && cd ipfetch && sudo sh setup.sh
 
-#firefox extensions
+
+
+# firefox extensions, to make it better
 
 #downloading them
 mkdir ~/ff-extensions
@@ -68,13 +72,20 @@ cd
 rm -rf ~/ff-extensions 
 
 
+# yt-dlp, yt-dl but newer and not api limited, used to download content off near every streaming site
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
 
+
+# changing grub l
 git clone https://github.com/snwh/faba-icon-theme.git
 cd faba-icon-theme
 meson "build" --prefix=/usr
 sudo ninja -C "build" install
+
+# discord but FOSS and written in go such much faster
+# however one should use matrix instead of discord cuz discord logs everything you do and never deletes it
+go install -v github.com/diamondburned/gtkcord4@latest
 
 
 sudo pacman -Syu
