@@ -23,7 +23,7 @@ https://artixlinux.org/download.php
 # To Install
 first install git
 ```
-sudo pacman -S git
+sudo pacman -Syu git
 ```
 and then
 ```
