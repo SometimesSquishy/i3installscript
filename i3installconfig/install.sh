@@ -14,10 +14,14 @@ sudo pacman -Sy
 sudo cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
 sudo pacman -Sy
 sudo pacman -Syu --noconfirm
+
 mkdir ~/Tools
 mkdir ~/Tools/scripts
 mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
+mkdir ~/.config
+mkdir ~/.config/polybar
+mkdir ~/.config/i3
 mkdir ~/.config/newsboat
 mkdir ~/.config/picom
 mkdir ~/.cache/zsh
