@@ -109,8 +109,8 @@ chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/Tools/scripts/*
 chsh -s /bin/zsh
 
-sudo pacman -Scc --noconfirm
-yay -Scc --noconfirm
+sudo pacman -Scc
+yay -Scc
 
 sudo pacman -Rns xfce4 xfce4-goodies
 rm -rf ~.config/xfce4 
