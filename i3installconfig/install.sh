@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+echo "To change login screen go to ~/i3installscript/i3installconfig/etc/LightDmPics/ and change the pictures but keep the same names"
+
+
 
 
 echo "what is your open weather map key? https://home.openweathermap.org/api_keys"
