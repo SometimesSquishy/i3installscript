@@ -38,16 +38,24 @@ git clone https://github.com/SometimesSquishy/i3-rice.git
 cd ~/i3installscript/i3installconfig/i3-rice
 mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscript/i3installconfig && rm -rf i3-rice
 
-sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot feh firefox flameshot gtk4 htop i3-gaps i3blocks i3lock i3status kitty lxappearance make meson neofetch neovim newsboat ntfs-3g pacman-contrib picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth qbittorrent redshift resolvconf rofi tor tor-browser unzip wget xdotool zsh
+sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance lightdm-openrc lightdm-gtk-greet make meson neofetch neovim newsboat ntfs-3g pacman-contrib picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth qbittorrent redshift resolvconf rofi tor tor-browser unzip wget xdotool zsh
+
+#installing yay, an AUR helper
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
 makepkg -si c
 cd
 
+#funny packages ig
 yay -S absolutely-proprietary cava pulseaudio-control nerd-fonts-complete tlp betterlockscreen lf jq tty-clock-git backlight_control cbonsai spek-alternative plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
+
+
+# ZSH syntax highlighting
 
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 cd
+
+# Screentime counter
 git clone https://github.com/Waishnav/Watcher
 cd ./Watcher/
 ./install
