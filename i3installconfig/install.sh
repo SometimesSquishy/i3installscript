@@ -119,6 +119,9 @@ sudo cp ~/i3installscript/i3installconfig/etc/lightdm-gtk-greeter.conf /etc/ligh
 sudo cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
 sudo cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
 
+# Blocks all cringe stuff online other than youtub
+sudo cp ~/i3installscript/i3installconfig/etc/hosts /etc/hosts
+
 sudo nano /etc/doas.conf
 
 cd ~/ && rm -rf distro-grub-themes Watcher yay-git faba-icon-theme
