@@ -77,8 +77,8 @@ cd
 rm -rf ~/ff-extensions 
 firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM09wq4ciy5
 firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM0ca836npp
-firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM042psbw9q
-
+firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM042psbw9q 
+firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM031xa7ea0f
 
 # yt-dlp, yt-dl but newer and not api limited, used to download content off near every streaming site
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
