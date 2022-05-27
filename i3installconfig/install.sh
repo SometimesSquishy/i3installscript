@@ -49,6 +49,9 @@ cd
 #funny packages ig
 yay -S absolutely-proprietary cava pulseaudio-control nerd-fonts-complete tlp betterlockscreen lf jq tty-clock-git backlight_control cbonsai spek-alternative plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
 
+# neofetch but with searching ips
+git clone https://github.com/trakBan/ipfetch.git && cd ipfetch && sudo sh setup.sh
+
 
 # ZSH syntax highlighting
 
@@ -71,7 +74,7 @@ sudo cp ~/i3installscript/i3installconfig/etc/grub /etc/default/grub
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-git clone https://github.com/trakBan/ipfetch.git && cd ipfetch && sudo sh setup.sh
+
 
 
 
@@ -92,12 +95,13 @@ firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#
 firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM042psbw9q 
 firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM031xa7ea0f
 
+
 # yt-dlp, yt-dl but newer and not api limited, used to download content off near every streaming site
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
 
 
-# changing grub l
+# downloading and installing icons
 git clone https://github.com/snwh/faba-icon-theme.git
 cd faba-icon-theme
 meson "build" --prefix=/usr
@@ -119,7 +123,7 @@ sudo cp ~/i3installscript/i3installconfig/etc/lightdm-gtk-greeter.conf /etc/ligh
 sudo cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
 sudo cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
 
-# Blocks all cringe stuff online other than youtub
+# Blocks all cringe stuff online other than youtub (maybe controversial for porn addicts)
 sudo cp ~/i3installscript/i3installconfig/etc/hosts /etc/hosts
 
 sudo nano /etc/doas.conf
