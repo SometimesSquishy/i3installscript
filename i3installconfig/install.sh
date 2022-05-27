@@ -76,6 +76,8 @@ firefox -install-global-extension *.xpi
 cd
 rm -rf ~/ff-extensions 
 firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM09wq4ciy5
+firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM0ca836npp
+firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM042psbw9q
 
 
 # yt-dlp, yt-dl but newer and not api limited, used to download content off near every streaming site
