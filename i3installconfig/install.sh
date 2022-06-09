@@ -49,19 +49,10 @@ cd
 #funny packages ig
 yay -S absolutely-proprietary cava pulseaudio-control nerd-fonts-complete tlp betterlockscreen lf jq tty-clock-git backlight_control cbonsai spek-alternative plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
 
-# neofetch but with searching ips
-git clone https://github.com/trakBan/ipfetch.git && cd ipfetch && sudo sh setup.sh
-
 
 # ZSH syntax highlighting
 
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
-cd
-
-# Screentime counter
-git clone https://github.com/Waishnav/Watcher
-cd ./Watcher/
-./install
 cd
 
 # changing grub theme to artix, this can be changed to near any distro
@@ -73,8 +64,6 @@ sudo cp -r artix/ /boot/grub/themes
 sudo cp ~/i3installscript/i3installconfig/etc/grub /etc/default/grub
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-
-
 
 
 
@@ -107,9 +96,18 @@ cd faba-icon-theme
 meson "build" --prefix=/usr
 sudo ninja -C "build" install
 
-# discord but FOSS and written in go such much faster
+# discord client but FOSS and written in go such much faster
 # however one should use matrix instead of discord cuz discord logs everything you do and never deletes it
 go install -v github.com/diamondburned/gtkcord4@latest
+
+# neofetch but with searching ips
+git clone https://github.com/trakBan/ipfetch.git && cd ipfetch && sudo sh setup.sh
+
+# Screentime counter
+git clone https://github.com/Waishnav/Watcher
+cd ./Watcher/
+./install
+cd
 
 
 sudo pacman -Syu
