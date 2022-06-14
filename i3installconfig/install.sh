@@ -38,7 +38,7 @@ git clone https://github.com/SometimesSquishy/i3-rice.git
 cd ~/i3installscript/i3installconfig/i3-rice
 mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscript/i3installconfig && rm -rf i3-rice
 
-sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance lightdm-openrc lightdm-gtk-greeter make meson neofetch neovim newsboat ntfs-3g pacman-contrib picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth qbittorrent redshift resolvconf rofi tor tor-browser unzip wget xdotool zsh
+sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance lightdm-openrc lightdm-gtk-greeter make meson neofetch neovim newsboat ntfs-3g pacman-contrib picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth python-pip qbittorrent redshift resolvconf rofi tor tor-browser unzip wget xdotool zsh
 
 #installing yay, an AUR helper
 git clone https://aur.archlinux.org/yay-git.git
