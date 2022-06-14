@@ -72,17 +72,13 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 #downloading them
 mkdir ~/ff-extensions
 cd ~/ff-extensions
-wget https://addons.mozilla.org/firefox/downloads/file/3951009/sponsorblock-4.4.1.xpi https://addons.mozilla.org/firefox/downloads/file/3933192/ublock_origin-1.42.4-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3943310/dark_reader-4.9.50-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3902154/decentraleyes-2.0.17-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3948477/i_dont_care_about_cookies-3.4.0.xpi https://addons.mozilla.org/firefox/downloads/file/3923300/facebook_container-2.3.2-fx.xpi https://addons.mozilla.org/firefox/downloads/file/3927638/clearurls-1.24.1-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3949235/enhancer_for_youtube-2.0.114.1.xpi https://addons.mozilla.org/firefox/downloads/file/3009842/enhanced_h264ify-2.1.0.xpi https://addons.mozilla.org/firefox/downloads/file/3928332/crxviewer-1.6.12.xpi https://addons.mozilla.org/firefox/downloads/file/3770708/violentmonkey-2.13.0.xpi 
+wget https://addons.mozilla.org/firefox/downloads/file/3941589/return_youtube_dislikes-3.0.0.1.xpi https://addons.mozilla.org/firefox/downloads/file/3951009/sponsorblock-4.4.1.xpi https://addons.mozilla.org/firefox/downloads/file/3933192/ublock_origin-1.42.4-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3943310/dark_reader-4.9.50-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3902154/decentraleyes-2.0.17-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3948477/i_dont_care_about_cookies-3.4.0.xpi https://addons.mozilla.org/firefox/downloads/file/3923300/facebook_container-2.3.2-fx.xpi https://addons.mozilla.org/firefox/downloads/file/3927638/clearurls-1.24.1-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3949235/enhancer_for_youtube-2.0.114.1.xpi https://addons.mozilla.org/firefox/downloads/file/3009842/enhanced_h264ify-2.1.0.xpi https://addons.mozilla.org/firefox/downloads/file/3928332/crxviewer-1.6.12.xpi https://addons.mozilla.org/firefox/downloads/file/3770708/violentmonkey-2.13.0.xpi 
 
 #installing them
 cd ~/ff-extensions
 firefox -install-global-extension *.xpi
 cd
 rm -rf ~/ff-extensions 
-firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM09wq4ciy5
-firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM0ca836npp
-firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM042psbw9q 
-firefox moz-extension://45380b21-9b80-4a7b-8ac6-95191be0ed75/confirm/index.html#VM031xa7ea0f
 
 
 # yt-dlp, yt-dl but newer and not api limited, used to download content off near every streaming site
