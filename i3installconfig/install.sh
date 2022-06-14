@@ -7,7 +7,7 @@ echo "To change login screen pictures go to ~/i3installscript/i3installconfig/et
 
 echo "what is your open weather map key? https://home.openweathermap.org/api_keys"
 read -r OWMKEY
-echo $OWMKEY >> $HOME/.config/polybar/owm-key
+echo $OWMKEY >> $HOME/.config/polybar/scripts/owm-key
 
 sleep 1
 sudo pacman -Sy
