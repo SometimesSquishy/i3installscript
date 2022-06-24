@@ -47,7 +47,7 @@ makepkg -si c
 cd
 
 #funny packages ig
-yay -S absolutely-proprietary cava pulseaudio-control nerd-fonts-complete tlp betterlockscreen lf jq tty-clock-git backlight_control cbonsai spek-alternative plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
+yay -S absolutely-proprietary cava pulseaudio-control nerd-fonts-complete tlp betterlockscreen lf jq tty-clock-git backlight_control cbonsai nerd-fonts-complete spek-alternative plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
 
 
 # ZSH syntax highlighting
