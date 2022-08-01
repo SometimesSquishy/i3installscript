@@ -11,11 +11,11 @@ https://artixlinux.org/download.php
 
 
 <p align="center">
-  <img src="https://github.com/SometimesSquishy/i3installscript/blob/main/Screenshots/2022-04-23_21-24_1.png">
+  <img src="https://github.com/SometimesSquishy/i3installscript/blob/main/Screenshots/2022-07-31_18-32.png?raw=true">
 </p>
 
 <p align="center">
-  <img src="https://github.com/SometimesSquishy/i3installscript/blob/main/Screenshots/2022-04-23_21-24.png">
+  <img src="https://github.com/SometimesSquishy/i3installscript/blob/main/Screenshots/2022-07-31_18-35.png?raw=true">
 </p>
 
 
