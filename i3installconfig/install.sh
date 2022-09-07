@@ -9,7 +9,7 @@ read -r OWMKEY
 echo $OWMKEY >> $HOME/.config/polybar/scripts/owm-key
 sleep 1
 
-echo "what about what city you're in? if not US go change that yourself"
+echo "what about what city you're in? if not US go change that yourself. also im pretty sure that capitalization doesnt matter for cityname but idk"
 read -r CITYNAME
 echo $CITYNAME >> $HOME/.config/polybar/scripts/CITYNAME
 
