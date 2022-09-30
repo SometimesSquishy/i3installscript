@@ -46,6 +46,8 @@ mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscri
 
 sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot fd feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance lightdm-openrc lightdm-gtk-greeter make meson ncdu neofetch neovim newsboat ntfs-3g pacman-contrib picard picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth python-pip qbittorrent redshift resolvconf rofi tor tor-browser unzip wget xdotool zsh
 
+cd
+
 #installing yay, an AUR helper
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
