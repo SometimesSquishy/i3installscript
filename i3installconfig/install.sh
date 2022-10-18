@@ -100,6 +100,15 @@ cd faba-icon-theme
 meson "build" --prefix=/usr
 sudo ninja -C "build" install
 
+
+#installing polybar crypto module
+cd
+git clone https://github.com/plinki/polybar-cryptocurrency.git
+
+cd polybar-cryptocurrency && ./setup.sh
+cd
+
+
 # discord client but FOSS and written in go such much faster
 # however one should use matrix instead of discord cuz discord logs everything you do and never deletes it
 go install -v github.com/diamondburned/gtkcord4@latest
