@@ -102,11 +102,15 @@ sudo ninja -C "build" install
 
 
 #installing polybar crypto module
-cd
-git clone https://github.com/plinki/polybar-cryptocurrency.git
 
-cd polybar-cryptocurrency && ./setup.sh
 cd
+git clone https://github.com/willHol/polybar-crypto.git &&
+    cd polybar-crypto &&
+    mkdir -p ~/.config/polybar &&
+    cp ./{crypto-config,crypto.py} ~/.config/polybar &&
+    sudo chmod u+x ~/.config/polybar/crypto.py
+cd
+
 
 
 # discord client but FOSS and written in go such much faster
