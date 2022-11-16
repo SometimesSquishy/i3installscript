@@ -14,11 +14,18 @@ read -r CITYNAME
 echo $CITYNAME >> $HOME/.config/polybar/scripts/CITYNAME
 sleep 1
 
+
+echo 'ParallelDownloads = 5' | sudo tee -a /etc/pacman.conf
+
 sudo pacman -Sy
 sudo pacman -Syu
+
+
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-arch
 sudo pacman -Syu artix-archlinux-support 
 sudo pacman-key --populate archlinux 
+
+
 sudo mv /etc/pacman.d/mirrorlist-arch.pacnew /etc/pacman.d/mirrorlist-arch
 sudo pacman -Sy
 sudo cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
