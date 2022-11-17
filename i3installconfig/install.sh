@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
-sudo sudo usermod -aG wheel $USER
+
+
+# making sure that script isnt run as root
+if ! [[ $(id -u) = 1000 ]]; then
+        echo "do not run this script as root pleas sirs,,, may brake computor...."
+        exit 1
+fi
+
+
+
+sudo usermod -aG wheel $USER
 
 
 echo "To change login screen pictures go to ~/i3installscript/i3installconfig/etc/LightDmPics/ and change the pictures but keep the same names"
