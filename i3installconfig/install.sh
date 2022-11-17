@@ -145,14 +145,14 @@ cd ./Watcher/
 cd
 
 
+
+
 sudo pacman -Syu
 cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
 cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/scripts
 cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
-sudo cp -r ~/i3installscript/i3installconfig/etc/LightDmPics/* /usr/share/backgrounds
 sudo cp ~/i3installscript/i3installconfig/etc/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
-sudo cp ~/i3installscript/i3installconfig/etc/lightdm-gtk-greeter.conf /etc/lightdm
 sudo cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
 sudo cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
 
