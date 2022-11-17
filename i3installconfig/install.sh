@@ -71,6 +71,31 @@ cd
 
 
 #-_-_-_-_-Downloading packages.-_-_-_-#
+
+
+        echo "installing GPU packages"
+                echo "Input A for AMD, I for intel integrated graphics, or N for nvidia"
+                read gpu
+                if [[ "$gpu" = A ]] || [[ "$gpu" = a ]]; then
+                        echo "Installing AMD open source drivers..."
+                        sudo pacman -S --noconfirm xf86-video-amdgpu mesa &>/dev/null
+
+
+                fi
+                if [[ "$gpu" = I ]] || [[ "$gpu" = i ]]; then
+                        echo "Intel graphics will work best with Xorg's built-in modesetting driver, so there's no need to install an independent driver."
+                        echo "Installing mesa..."
+                        sudo pacman -S --noconfirm mesa &>/dev/null
+
+
+                fi
+                if [[ "$gpu" = N ]] || [[ "$gpu" = n ]]; then
+                        echo "Installing Nvidia drivers and utilities..."
+                        sudo pacman -S --noconfirm nvidia nvidia-utils &>/dev/null
+
+
+
+
 sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot fd feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance lightdm-openrc lightdm-gtk-greeter make meson ncdu neofetch neovim newsboat ntfs-3g pacman-contrib picard picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth python-pip qbittorrent redshift resolvconf rofi tor tor-browser unzip unrar obs-studio v4l2loopback-dkms wget xdotool xorg-server xorg-setxkbmap zsh
 
 
