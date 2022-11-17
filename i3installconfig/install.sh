@@ -71,8 +71,11 @@ cd
 
 
 #-_-_-_-_-Downloading packages.-_-_-_-#
-sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot fd feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance lightdm-openrc lightdm-gtk-greeter make meson ncdu neofetch neovim newsboat ntfs-3g pacman-contrib picard picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth python-pip qbittorrent redshift resolvconf rofi tor tor-browser unzip unrar obs-studio v4l2loopback-dkms wget xdotool zsh
+sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot fd feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance lightdm-openrc lightdm-gtk-greeter make meson ncdu neofetch neovim newsboat ntfs-3g pacman-contrib picard picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth python-pip qbittorrent redshift resolvconf rofi tor tor-browser unzip unrar obs-studio v4l2loopback-dkms wget xdotool xorg-server xorg-setxkbmap zsh
 
+
+# adding xinitrc for xorg (the good display manager) #
+echo exec i3 | tee -a /home/$USER/.xinitrc
 
 cd
 
