@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+sudo sudo usermod -aG wheel $USER
+
 
 echo "To change login screen pictures go to ~/i3installscript/i3installconfig/etc/LightDmPics/ and change the pictures but keep the same names"
 
