@@ -14,24 +14,23 @@ read -r CITYNAME
 echo $CITYNAME >> $HOME/.config/polybar/scripts/CITYNAME
 sleep 1
 
-
+#-_-_-_- Changing pacman config -_-_-_-#
 echo 'ParallelDownloads = 5' | sudo tee -a /etc/pacman.conf
 
 sudo pacman -Sy
 sudo pacman -Syu
 
-
-sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-arch
 sudo pacman -Syu artix-archlinux-support 
 sudo pacman-key --populate archlinux 
 
-
-sudo mv /etc/pacman.d/mirrorlist-arch.pacnew /etc/pacman.d/mirrorlist-arch
 sudo pacman -Sy
 sudo cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
 sudo pacman -Sy
-sudo pacman -Syu --noconfirm
+#-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-#
 
+
+
+#-_-_-_- Directories for stuff
 mkdir ~/Tools
 mkdir ~/Tools/scripts
 mkdir ~/Pictures
@@ -44,14 +43,24 @@ mkdir ~/.config/picom
 mkdir ~/.cache/zsh
 mkdir ~/.config/dunst
 mkdir ~/.config/lf
+mkdir ~/.config/htop
+mkdir ~/.config/neofetch
+mkdir ~/.config/nvim
+#-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-#
 
 
+#-_-_-_-_-Cloning Config files.-_-_-_-#
 cd ~/i3installscript/i3installconfig
 git clone https://github.com/SometimesSquishy/i3-rice.git
 cd ~/i3installscript/i3installconfig/i3-rice
 mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscript/i3installconfig && rm -rf i3-rice
+cd
+#-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-#
 
+
+#-_-_-_-_-Downloading packages.-_-_-_-#
 sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf dunst dust exa fakeroot fd feh firefox flameshot htop i3-gaps i3blocks i3lock i3status kitty lxappearance lightdm-openrc lightdm-gtk-greeter make meson ncdu neofetch neovim newsboat ntfs-3g pacman-contrib picard picom polybar pulseaudio pulseaudio-alsa pulseaudio-bluetooth python-pip qbittorrent redshift resolvconf rofi tor tor-browser unzip unrar obs-studio v4l2loopback-dkms wget xdotool zsh
+
 
 cd
 
@@ -69,6 +78,8 @@ yay -S absolutely-proprietary cava pulseaudio-control nerd-fonts-complete tlp be
 
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 cd
+
+
 
 # changing grub theme to artix, this can be changed to near any distro
 
