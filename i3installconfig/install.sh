@@ -171,7 +171,7 @@ chsh -s /bin/zsh
 sudo pacman -Scc
 yay -Scc
 
-sudo pacman -Rns xfce4 xfce4-goodies
+sudo pacman -Rns xfce4 xfce4-goodies lightdm-greeter lightdm lightdm-openrc lightdm-gtk-greeter sudo
 rm -rf ~.config/xfce4 
 clear
 
