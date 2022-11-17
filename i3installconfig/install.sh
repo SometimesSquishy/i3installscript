@@ -154,7 +154,17 @@ cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
 cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
 sudo cp ~/i3installscript/i3installconfig/etc/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 sudo cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
-sudo cp ~/i3installscript/i3installconfig/etc/doas /etc/doas.conf
+
+
+#-_-_-_-_- doas config -_-_-_-_-#
+echo "permit :wheel
+permit persist :wheel
+permit nopass $USER cmd reboot
+permit nopass $USER cmd poweroff
+permit nopass $USER cmd tlp
+permit nopass $USER cmd wg-quick" | sudo tee -a /etc/doas.conf
+#-_-_-_-_-_-_-_-_-#
+
 
 # Blocks all cringe stuff online other than youtub (maybe controversial for porn addicts)
 sudo cp ~/i3installscript/i3installconfig/etc/hosts /etc/hosts
