@@ -1,16 +1,23 @@
 #!/usr/bin/env bash
 
 
+echo "make sure this is in home directory plz"
 # making sure that script isnt run as root
 if ! [[ $(id -u) = 1000 ]]; then
         echo "do not run this script as root pleas sirs,,, may brake computor...."
         exit 1
 fi
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_NAME=$( basename "$0" )
+SCRIPTA=$( echo "$SCRIPT_DIR/$SCRIPT_NAME" )
+
+
+
 
 
 ###sudo usermod -aG wheel $USER
-
+#if you get GMPE error no data run #rm -R /var/lib/pacman/sync
 
 echo "To change login screen pictures go to ~/i3installscript/i3installconfig/etc/LightDmPics/ and change the pictures but keep the same names"
 
@@ -18,12 +25,12 @@ sleep 3
 
 echo "what is your open weather map key? https://home.openweathermap.org/api_keys"
 read -r OWMKEY
-echo $OWMKEY >> $HOME/.config/polybar/scripts/owm-key
+sed -i "1i APIKEY=$OWMKEY" $HOME/.config/polybar/scripts/weather.sh
 sleep 1
 
 echo "what about what city you're in? if not US go change that yourself. also im pretty sure that capitalization doesnt matter for cityname but idk"
 read -r CITYNAME
-echo $CITYNAME >> $HOME/.config/polybar/scripts/CITYNAME
+sed -i "1i CITY_NAME=$CITYNAME" $HOME/.config/polybar/scripts/weather.sh
 sleep 1
 
 #-_-_-_- Changing pacman config -_-_-_-#
@@ -32,23 +39,21 @@ echo 'ParallelDownloads = 5' | sudo tee -a /etc/pacman.conf
 sudo pacman -Sy
 sudo pacman -Syu
 
-sudo pacman -Syu artix-archlinux-support 
-sudo pacman-key --populate archlinux 
+sudo pacman -Syu artix-archlinux-support
+sudo pacman-key --populate archlinux
 
 sudo pacman -Sy
-sudo cp ~/i3installscript/i3installconfig/pacman.conf /etc/pacman.conf
+sudo cp $SCRIPT_DIR/pacman.conf /etc/pacman.conf
 sudo pacman -Sy
 #-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-#
 
 
 
 #-_-_-_- Directories for stuff
-mkdir ~/Tools
-mkdir ~/Tools/scripts
-mkdir ~/Pictures
-mkdir ~/Pictures/Wallpapers
+mkdir -p ~/Tools/scripts
+mkdir -p ~/Pictures/Wallpapers
 mkdir ~/.config
-mkdir ~/.config/polybar
+mkdir -p ~/.config/polybar/scripts
 mkdir ~/.config/i3
 mkdir ~/.config/newsboat
 mkdir ~/.config/picom
@@ -62,10 +67,16 @@ mkdir ~/.config/nvim
 
 
 #-_-_-_-_-Cloning Config files.-_-_-_-#
-cd ~/i3installscript/i3installconfig
+
+## MAKE IT USE CUR_DIR AND SCRIPT_DIR
+cd $SCRIPT_DIR
 git clone https://github.com/SometimesSquishy/i3-rice.git
-cd ~/i3installscript/i3installconfig/i3-rice
-mv configs scripts zshrc ~/i3installscript/i3installconfig && cd ~/i3installscript/i3installconfig && rm -rf i3-rice
+git clone https://github.com/SometimesSquishy/Scripts.git
+cd $SCRIPT_DIR/i3-rice
+mv configs zshrc $SCRIPT_DIR && cd $SCRIPT_DIR && rm -rf i3-rice
+cd
+
+
 cd
 #-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-#
 
@@ -73,26 +84,14 @@ cd
 #-_-_-_-_-Downloading packages.-_-_-_-#
 
 
-        echo "installing GPU packages"
-                echo "Input A for AMD, I for intel integrated graphics, or N for nvidia"
+        echo -e "GPU packages to be installed: \nA for AMD, I for intel, or N for nvidia"
                 read gpu
-                if [[ "$gpu" = A ]] || [[ "$gpu" = a ]]; then
-                        echo "Installing AMD open source drivers..."
-                        sudo pacman -S --noconfirm xf86-video-amdgpu mesa &>/dev/null
-
-
-                fi
-                if [[ "$gpu" = I ]] || [[ "$gpu" = i ]]; then
-                        echo "Intel graphics will work best with Xorg's built-in modesetting driver, so there's no need to install an independent driver."
-                        echo "Installing mesa..."
-                        sudo pacman -S --noconfirm mesa &>/dev/null
-
-
-                fi
-                if [[ "$gpu" = N ]] || [[ "$gpu" = n ]]; then
-                        echo "Installing Nvidia drivers and utilities..."
-                        sudo pacman -S --noconfirm nvidia nvidia-utils &>/dev/null
-
+case "GPU" in
+	a*)echo "Installing open source AMD drivers"; sudo pacman -S xf86-video-amdgpu mesa ;;
+	i*) echo "intel IGPU work best with mesa driver"; sudo pacman -S mesa ;;
+	n*) echo "Installing nvidia stuff"; sudo pacman -S nvidia nvidia-utils ;;
+	*) echo "please input something" ;;
+esac
 
 
 
@@ -100,19 +99,25 @@ sudo pacman -S alsa-utils arandr base-devel bat blueman caja cmus curl doas duf 
 
 
 # adding xinitrc for xorg (the good display manager) #
-echo exec i3 | tee -a /home/$USER/.xinitrc
+echo exec i3 | tee /home/$USER/.xinitrc
 
 cd
 
 #installing yay, an AUR helper
+cd ~/
 git clone https://aur.archlinux.org/yay-git.git
 cd ~/yay-git
 makepkg -si c
 cd
 
 #funny packages ig
-yay -S absolutely-proprietary cava pulseaudio-control nerd-fonts-complete tlp betterlockscreen lf jq tty-clock-git backlight_control cbonsai nerd-fonts-complete spek-alternative plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
+yay -S cava pulseaudio-control nerd-fonts-complete tlp betterlockscreen lf jq tty-clock-git backlight_control cbonsai nerd-fonts-complete spek-alternative plata-theme pulseaudio-control ttf-all-the-icons sl speedtest-cli imagemagick
 
+## adding earlyoom, then starting it. out of memory killer but better.
+yay -S earlyoom-openrc
+
+sudo rc-update add earlyoom
+sudo rc-service earlyoom start
 
 # ZSH syntax highlighting
 
@@ -123,6 +128,10 @@ cd
 
 # changing grub theme to artix, this can be changed to near any distro
 
+echo "do you want to change your grub theme? >> y << for yes, enter for no."
+read cgrub
+
+if [ "$cgrub" = "y" ]; then
 git clone https://github.com/AdisonCavani/distro-grub-themes.git
 sudo mkdir /boot/grub/themes
 cd distro-grub-themes/customize
@@ -130,7 +139,7 @@ sudo cp -r artix/ /boot/grub/themes
 sudo cp ~/i3installscript/i3installconfig/etc/grub /etc/default/grub
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-
+fi
 
 
 # firefox extensions, to make it better
@@ -138,13 +147,13 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 #downloading them
 mkdir ~/ff-extensions
 cd ~/ff-extensions
-wget https://addons.mozilla.org/firefox/downloads/file/3906578/clickbait_remover_for_youtube-0.6.1.xpi https://addons.mozilla.org/firefox/downloads/file/3941589/return_youtube_dislikes-3.0.0.1.xpi https://addons.mozilla.org/firefox/downloads/file/3951009/sponsorblock-4.4.1.xpi https://addons.mozilla.org/firefox/downloads/file/3933192/ublock_origin-1.42.4-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3943310/dark_reader-4.9.50-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3902154/decentraleyes-2.0.17-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3948477/i_dont_care_about_cookies-3.4.0.xpi https://addons.mozilla.org/firefox/downloads/file/3923300/facebook_container-2.3.2-fx.xpi https://addons.mozilla.org/firefox/downloads/file/3927638/clearurls-1.24.1-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3949235/enhancer_for_youtube-2.0.114.1.xpi https://addons.mozilla.org/firefox/downloads/file/3009842/enhanced_h264ify-2.1.0.xpi https://addons.mozilla.org/firefox/downloads/file/3928332/crxviewer-1.6.12.xpi https://addons.mozilla.org/firefox/downloads/file/3770708/violentmonkey-2.13.0.xpi 
+wget https://addons.mozilla.org/firefox/downloads/file/3906578/clickbait_remover_for_youtube-0.6.1.xpi https://addons.mozilla.org/firefox/downloads/file/3941589/return_youtube_dislikes-3.0.0.1.xpi https://addons.mozilla.org/firefox/downloads/file/3951009/sponsorblock-4.4.1.xpi https://addons.mozilla.org/firefox/downloads/file/3933192/ublock_origin-1.42.4-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3943310/dark_reader-4.9.50-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3902154/decentraleyes-2.0.17-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3948477/i_dont_care_about_cookies-3.4.0.xpi https://addons.mozilla.org/firefox/downloads/file/3923300/facebook_container-2.3.2-fx.xpi https://addons.mozilla.org/firefox/downloads/file/3927638/clearurls-1.24.1-an+fx.xpi https://addons.mozilla.org/firefox/downloads/file/3949235/enhancer_for_youtube-2.0.114.1.xpi https://addons.mozilla.org/firefox/downloads/file/3009842/enhanced_h264ify-2.1.0.xpi https://addons.mozilla.org/firefox/downloads/file/3928332/crxviewer-1.6.12.xpi https://addons.mozilla.org/firefox/downloads/file/3770708/violentmonkey-2.13.0.xpi
 
 #installing them
 cd ~/ff-extensions
 firefox -install-global-extension *.xpi
 cd
-rm -rf ~/ff-extensions 
+rm -rf ~/ff-extensions
 
 
 # yt-dlp, yt-dl but newer and not api limited, used to download content off near every streaming site
@@ -171,29 +180,22 @@ cd
 
 
 
-# discord client but FOSS and written in go such much faster
-# however one should use matrix instead of discord cuz discord logs everything you do and never deletes it
-go install -v github.com/diamondburned/gtkcord4@latest
 
 # neofetch but with searching ips
 git clone https://github.com/trakBan/ipfetch.git && cd ipfetch && sudo sh setup.sh
 
-# Screentime counter
-git clone https://github.com/Waishnav/Watcher
-cd ./Watcher/
-./install
-cd
 
 
 
 
 sudo pacman -Syu
-cp -r ~/i3installscript/i3installconfig/Wallpapers/* ~/Pictures/Wallpapers
-cp -r ~/i3installscript/i3installconfig/scripts/* ~/Tools/scripts
-cp -r ~/i3installscript/i3installconfig/configs/* ~/.config
-cp -r ~/i3installscript/i3installconfig/zshrc ~/.zshrc
-sudo cp ~/i3installscript/i3installconfig/etc/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
-sudo cp ~/i3installscript/i3installconfig/etc/pcspkr /etc/modprobe.d/nobeep.conf
+cp -r $SCRIPT_DIR/Wallpapers/* ~/Pictures/Wallpapers
+rm -rf $SCRIPT_DIR/Scripts/.git $SCRIPT_DIR/Scripts/README.md
+cp -r $SCRIPT_DIR/Scripts/* ~/Tools/scripts
+cp -r $SCRIPT_DIR/configs/* ~/.config
+cp -r $SCRIPT_DIR/zshrc ~/.zshrc
+sudo cp $SCRIPT_DIR/etc/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+sudo cp $SCRIPT_DIR/etc/pcspkr /etc/modprobe.d/nobeep.conf
 
 
 #-_-_-_-_- doas config -_-_-_-_-#
@@ -207,7 +209,7 @@ permit nopass $USER cmd wg-quick" | sudo tee -a /etc/doas.conf
 
 
 # Blocks all cringe stuff online other than youtub (maybe controversial for porn addicts)
-sudo cp ~/i3installscript/i3installconfig/etc/hosts /etc/hosts
+sudo cp $SCRIPT_DIR/etc/hosts /etc/hosts
 
 sudo nano /etc/doas.conf
 
@@ -222,7 +224,7 @@ sudo pacman -Scc
 yay -Scc
 
 sudo pacman -Rns xfce4 xfce4-goodies lightdm-greeter lightdm lightdm-openrc lightdm-gtk-greeter sudo
-rm -rf ~.config/xfce4 
+rm -rf ~.config/xfce4
 clear
 
 echo "rebooting, switch to i3 on login screen, ctrl c to cancel reboot."
