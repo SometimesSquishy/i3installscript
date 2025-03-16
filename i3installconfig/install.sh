@@ -87,7 +87,7 @@ cd
         echo -e "GPU packages to be installed: \nA for AMD, I for intel, or N for nvidia"
                 read gpu
 case "GPU" in
-	a*)echo "Installing open source AMD drivers"; sudo pacman -S xf86-video-amdgpu mesa ;;
+	a*)echo "Installing open source AMD drivers"; sudo pacman -S xf86-video-amdgpu mesa radeontop;;
 	i*) echo "intel IGPU work best with mesa driver"; sudo pacman -S mesa ;;
 	n*) echo "Installing nvidia stuff"; sudo pacman -S nvidia nvidia-utils ;;
 	*) echo "please input something" ;;
@@ -124,7 +124,7 @@ sudo rc-service earlyoom start
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
 cd
 
-
+Update install.sh
 
 # changing grub theme to artix, this can be changed to near any distro
 
@@ -188,6 +188,9 @@ cd
 # neofetch but with searching ips
 git clone https://github.com/trakBan/ipfetch.git && cd ipfetch && sudo sh setup.sh
 
+
+echo "this will detect all sensors on your computers, ex: gpu temps"
+sudo sensors-detect
 
 
 
