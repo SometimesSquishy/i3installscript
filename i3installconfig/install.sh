@@ -87,7 +87,7 @@ cd
         echo -e "GPU packages to be installed: \nA for AMD, I for intel, or N for nvidia"
                 read gpu
 case "GPU" in
-	a*)echo "Installing open source AMD drivers"; sudo pacman -S xf86-video-amdgpu mesa radeontop;;
+	a*)echo "Installing open source AMD drivers"; sudo pacman -S xf86-video-amdgpu mesa amdgpu_top ;;
 	i*) echo "intel IGPU work best with mesa driver"; sudo pacman -S mesa ;;
 	n*) echo "Installing nvidia stuff"; sudo pacman -S nvidia nvidia-utils ;;
 	*) echo "please input something" ;;
